@@ -1,5 +1,5 @@
 import "./style.css";
-class AccordionSlider {
+class CarSliders {
   private slides: NodeListOf<HTMLElement>;
   private botaoVoltarSlide: HTMLElement | null;
   private botaoProximoSlide: HTMLElement | null;
@@ -11,10 +11,10 @@ class AccordionSlider {
     this.botaoProximoSlide = document.querySelector<HTMLElement>(".nav-next");
     this.indexAtual = -1;
 
-    this.init();
+    this.iniciar();
   }
 
-  private init(): void {
+  private iniciar(): void {
     this.setupSlideClickListeners();
     this.setupNavigationListeners();
     this.setupKeyboardListeners();
@@ -27,10 +27,10 @@ class AccordionSlider {
   }
 
   private setupNavigationListeners(): void {
-    this.botaoVoltarSlide?.addEventListener("click", () =>
-      this.previousSlide()
+    this.botaoVoltarSlide?.addEventListener("click", () => this.voltarSlide());
+    this.botaoProximoSlide?.addEventListener("click", () =>
+      this.proximoSlide()
     );
-    this.botaoProximoSlide?.addEventListener("click", () => this.nextSlide());
   }
 
   private setupKeyboardListeners(): void {
@@ -41,11 +41,11 @@ class AccordionSlider {
 
   private handleKeyboardNavigation(event: KeyboardEvent): void {
     if (event.key === "ArrowLeft") {
-      this.previousSlide();
+      this.voltarSlide();
       return;
     }
     if (event.key === "ArrowRight") {
-      this.nextSlide();
+      this.proximoSlide();
     }
   }
 
@@ -76,12 +76,12 @@ class AccordionSlider {
     this.indexAtual = index;
   }
 
-  private nextSlide(): void {
+  private proximoSlide(): void {
     const nextIndex = this.calculateNextIndex();
     this.setActiveSlide(nextIndex);
   }
 
-  private previousSlide(): void {
+  private voltarSlide(): void {
     const prevIndex = this.calculatePreviousIndex();
     this.setActiveSlide(prevIndex);
   }
@@ -108,7 +108,7 @@ class AccordionSlider {
 class SliderInitializer {
   static initialize(): void {
     document.addEventListener("DOMContentLoaded", () => {
-      new AccordionSlider();
+      new CarSliders();
     });
   }
 }
