@@ -2,7 +2,18 @@
 
 Uma experiência de vitrine online para carros esportivos e de luxo, construída com Vite, TypeScript e animações com GSAP. O projeto prioriza código limpo, arquitetura simples e extensível, acessibilidade, SEO semântico e performance.
 
----
+
+ <tr>
+    <td style="border: 3px solid #00ffc8; border-radius: 10px; padding: 8px; background: #111;">
+      <img src="https://github.com/user-attachments/assets/93817ae0-3f33-41e4-a774-423998fa50e7" alt="GIF 1" style="display: block; margin: 0 auto; border-radius:8px; max-width:100%;">
+    </td>
+  </tr>
+
+
+
+
+
+
 
 ## Visão geral
 
