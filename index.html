@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,6 +8,272 @@
   </head>
   <body>
     <div id="app"></div>
+    <main class="slider-container" role="main">
+      <header class="now-showing" aria-label="Status da exibição">
+        <span aria-hidden="true"></span>
+        Now in Showroom
+      </header>
+
+      <section
+        class="accordion-slider"
+        role="region"
+        aria-label="Galeria de veículos"
+      >
+        <article
+          class="slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+          "
+          role="button"
+          tabindex="0"
+          aria-label="BMW M3 Competition - Clique para expandir detalhes"
+        >
+          <div class="slide-content">
+            <span class="slide-number" aria-hidden="true">01</span>
+            <header class="car-brand">BMW M3</header>
+            <h2 class="car-name">BMW M3 Competition</h2>
+            <p class="car-subtitle">Twin-Turbo Inline-6 Performance</p>
+
+            <dl class="car-specs" aria-label="Especificações técnicas">
+              <div class="spec-row">
+                <dt class="spec-label">Engine:</dt>
+                <dd class="spec-value">3.0L Twin-Turbo Inline-6</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Power:</dt>
+                <dd class="spec-value">503 HP @ 6,250 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Torque:</dt>
+                <dd class="spec-value">650 Nm @ 2,750 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Transmission:</dt>
+                <dd class="spec-value">8-Speed Automatic</dd>
+              </div>
+            </dl>
+
+            <aside
+              class="performance-badges"
+              aria-label="Badges de performance"
+            >
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>0-100: 3.9s</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Top Speed: 290 km/h</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Price: $73,400</span>
+              </div>
+            </aside>
+          </div>
+          <button
+            class="add-button"
+            aria-label="Adicionar BMW M3 à seleção"
+            type="button"
+          ></button>
+        </article>
+
+        <article
+          class="slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80');
+          "
+          role="button"
+          tabindex="0"
+          aria-label="Lamborghini Huracán - Clique para expandir detalhes"
+        >
+          <div class="slide-content">
+            <span class="slide-number" aria-hidden="true">02</span>
+            <header class="car-brand">Lamborghini Huracán</header>
+            <h2 class="car-name">Lamborghini Huracán</h2>
+            <p class="car-subtitle">Naturally Aspirated V10 Excellence</p>
+
+            <dl class="car-specs" aria-label="Especificações técnicas">
+              <div class="spec-row">
+                <dt class="spec-label">Engine:</dt>
+                <dd class="spec-value">5.2L V10 Naturally Aspirated</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Power:</dt>
+                <dd class="spec-value">610 HP @ 8,250 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Torque:</dt>
+                <dd class="spec-value">560 Nm @ 6,500 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Transmission:</dt>
+                <dd class="spec-value">7-Speed Dual-Clutch</dd>
+              </div>
+            </dl>
+
+            <aside
+              class="performance-badges"
+              aria-label="Badges de performance"
+            >
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>0-100: 3.2s</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Top Speed: 325 km/h</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Price: $248,295</span>
+              </div>
+            </aside>
+          </div>
+          <button
+            class="add-button"
+            aria-label="Adicionar Lamborghini Huracán à seleção"
+            type="button"
+          ></button>
+        </article>
+
+        <article
+          class="slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+          "
+          role="button"
+          tabindex="0"
+          aria-label="Ferrari SF90 Stradale - Clique para expandir detalhes"
+        >
+          <div class="slide-content">
+            <span class="slide-number" aria-hidden="true">03</span>
+            <header class="car-brand">Ferrari SF90</header>
+            <h2 class="car-name">Ferrari SF90 Stradale</h2>
+            <p class="car-subtitle">Plug-in Hybrid Revolution</p>
+
+            <dl class="car-specs" aria-label="Especificações técnicas">
+              <div class="spec-row">
+                <dt class="spec-label">Engine:</dt>
+                <dd class="spec-value">4.0L V8 Twin-Turbo + Electric</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Power:</dt>
+                <dd class="spec-value">1000 HP Combined</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Torque:</dt>
+                <dd class="spec-value">800 Nm @ 6,000 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Transmission:</dt>
+                <dd class="spec-value">8-Speed F1 DCT</dd>
+              </div>
+            </dl>
+
+            <aside
+              class="performance-badges"
+              aria-label="Badges de performance"
+            >
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>0-100: 2.5s</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Top Speed: 340 km/h</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Price: $625,000</span>
+              </div>
+            </aside>
+          </div>
+          <button
+            class="add-button"
+            aria-label="Adicionar Ferrari SF90 à seleção"
+            type="button"
+          ></button>
+        </article>
+
+        <article
+          class="slide"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1563720223185-11003d516935?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+          "
+          role="button"
+          tabindex="0"
+          aria-label="Porsche 911 Turbo S - Clique para expandir detalhes"
+        >
+          <div class="slide-content">
+            <span class="slide-number" aria-hidden="true">04</span>
+            <header class="car-brand">Porsche 911</header>
+            <h2 class="car-name">Porsche 911 Turbo S</h2>
+            <p class="car-subtitle">Twin-Turbo Flat-Six Perfection</p>
+
+            <dl class="car-specs" aria-label="Especificações técnicas">
+              <div class="spec-row">
+                <dt class="spec-label">Engine:</dt>
+                <dd class="spec-value">3.8L Twin-Turbo Flat-6</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Power:</dt>
+                <dd class="spec-value">640 HP @ 6,750 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Torque:</dt>
+                <dd class="spec-value">800 Nm @ 2,500 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Transmission:</dt>
+                <dd class="spec-value">8-Speed PDK</dd>
+              </div>
+            </dl>
+
+            <aside
+              class="performance-badges"
+              aria-label="Badges de performance"
+            >
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>0-100: 2.7s</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Top Speed: 330 km/h</span>
+              </div>
+              <div class="badge">
+                <span class="badge-icon" aria-hidden="true"></span>
+                <span>Price: $207,000</span>
+              </div>
+            </aside>
+          </div>
+          <button
+            class="add-button"
+            aria-label="Adicionar Porsche 911 à seleção"
+            type="button"
+          ></button>
+        </article>
+      </section>
+
+      <nav aria-label="Navegação do slider">
+        <button
+          class="navigation-arrows nav-prev"
+          type="button"
+          aria-label="Slide anterior"
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+        <button
+          class="navigation-arrows nav-next"
+          type="button"
+          aria-label="Próximo slide"
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+      </nav>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
