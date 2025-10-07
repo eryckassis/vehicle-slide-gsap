@@ -2,26 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>veicle-slide-gsap</title>
   </head>
   <body>
     <div id="app"></div>
     <main class="slider-container" role="main">
-      <header class="now-showing" aria-label="Status de Exibição">
+      <header class="now-showing" aria-label="Status da exibição">
         <span aria-hidden="true"></span>
-        Agora em nossa Loja
+        Now in Showroom
       </header>
 
       <section
-        class="accordin-slider"
+        class="accordion-slider"
         role="region"
         aria-label="Galeria de veículos"
       >
         <article
           class="slide"
           style="
-            background-image: url('https://i.postimg.cc/pL7QHymz/download-14.jpg');
+            background-image: url('https://images.unsplash.com/photo-1617788138017-80ad40651399?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
           "
           role="button"
           tabindex="0"
@@ -31,16 +32,20 @@
             <span class="slide-number" aria-hidden="true">01</span>
             <header class="car-brand">BMW M3</header>
             <h2 class="car-name">BMW M3 Competition</h2>
-            <p class="car-subtitle">Twin-Turbo Inline-6 Perfomance</p>
+            <p class="car-subtitle">Twin-Turbo Inline-6 Performance</p>
 
             <dl class="car-specs" aria-label="Especificações técnicas">
               <div class="spec-row">
                 <dt class="spec-label">Engine:</dt>
-                <dd class="spec-value">3.0 Twin-Turbo Inline-6</dd>
+                <dd class="spec-value">3.0L Twin-Turbo Inline-6</dd>
               </div>
               <div class="spec-row">
                 <dt class="spec-label">Power:</dt>
                 <dd class="spec-value">503 HP @ 6,250 RPM</dd>
+              </div>
+              <div class="spec-row">
+                <dt class="spec-label">Torque:</dt>
+                <dd class="spec-value">650 Nm @ 2,750 RPM</dd>
               </div>
               <div class="spec-row">
                 <dt class="spec-label">Transmission:</dt>
