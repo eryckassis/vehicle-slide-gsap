@@ -1,4 +1,4 @@
-# Veicle Slide GSAP — Slider de Veículos com Vite + TypeScript
+# Vehicle Slide GSAP — Slider de Veículos com Vite + TypeScript
 
 Uma experiência de vitrine online para carros esportivos e de luxo, construída com Vite, TypeScript e animações com GSAP. O projeto prioriza código limpo, arquitetura simples e extensível, acessibilidade, SEO semântico e performance.
 
