@@ -16,7 +16,12 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "type-check": "tsc --noEmit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "deploy": "vercel",
+    "deploy:prod": "vercel --prod",
+    "deploy:preview": "vercel",
+    "vercel:pull": "vercel pull",
+    "vercel:logs": "vercel logs"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
