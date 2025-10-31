@@ -1,0 +1,6 @@
+# 📝 HUSKY COMMIT-MSG HOOK
+# Valida a mensagem de commit antes de aceitar
+
+echo "📝 Husky: Validando mensagem de commit..."
+
+npx --no -- commitlint --edit "$1"

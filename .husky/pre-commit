@@ -1,0 +1,13 @@
+# 🐕 HUSKY PRE-COMMIT HOOK
+# Executa antes de cada commit para garantir qualidade do código
+
+echo "🐕 Husky: Verificando código antes do commit..."
+
+# Executa lint-staged (lint + format nos arquivos modificados)
+npx lint-staged
+
+# Verifica tipos TypeScript
+echo "🔍 Verificando tipos TypeScript..."
+npm run type-check
+
+echo "✅ Todas as verificações passaram! Commit permitido."
