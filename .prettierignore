@@ -1,0 +1,32 @@
+# Prettier Ignore
+# Arquivos que NÃO devem ser formatados pelo Prettier
+
+# Dependencies
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Build outputs
+dist/
+build/
+.vite/
+out/
+coverage/
+
+# Environment & configs
+.env
+.env.*
+!.env.example
+
+# Git
+.git/
+.husky/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

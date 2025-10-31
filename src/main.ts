@@ -1,4 +1,4 @@
-import "./style.css";
+import './style.css';
 class CarSliders {
   private slides: NodeListOf<HTMLElement>;
   private botaoVoltarSlide: HTMLElement | null;
@@ -6,9 +6,9 @@ class CarSliders {
   private indexAtual: number;
 
   constructor() {
-    this.slides = document.querySelectorAll<HTMLElement>(".slide");
-    this.botaoVoltarSlide = document.querySelector<HTMLElement>(".nav-prev");
-    this.botaoProximoSlide = document.querySelector<HTMLElement>(".nav-next");
+    this.slides = document.querySelectorAll<HTMLElement>('.slide');
+    this.botaoVoltarSlide = document.querySelector<HTMLElement>('.nav-prev');
+    this.botaoProximoSlide = document.querySelector<HTMLElement>('.nav-next');
     this.indexAtual = -1;
 
     this.iniciar();
@@ -22,29 +22,33 @@ class CarSliders {
 
   private setupSlideClickListeners(): void {
     this.slides.forEach((slide, index) => {
-      slide.addEventListener("click", () => this.setActiveSlide(index));
+      slide.addEventListener('click', () => {
+        this.setActiveSlide(index);
+      });
     });
   }
 
   private setupNavigationListeners(): void {
-    this.botaoVoltarSlide?.addEventListener("click", () => this.voltarSlide());
-    this.botaoProximoSlide?.addEventListener("click", () =>
-      this.proximoSlide()
-    );
+    this.botaoVoltarSlide?.addEventListener('click', () => {
+      this.voltarSlide();
+    });
+    this.botaoProximoSlide?.addEventListener('click', () => {
+      this.proximoSlide();
+    });
   }
 
   private setupKeyboardListeners(): void {
-    document.addEventListener("keydown", (e: KeyboardEvent) =>
-      this.handleKeyboardNavigation(e)
-    );
+    document.addEventListener('keydown', (e: KeyboardEvent) => {
+      this.handleKeyboardNavigation(e);
+    });
   }
 
   private handleKeyboardNavigation(event: KeyboardEvent): void {
-    if (event.key === "ArrowLeft") {
+    if (event.key === 'ArrowLeft') {
       this.voltarSlide();
       return;
     }
-    if (event.key === "ArrowRight") {
+    if (event.key === 'ArrowRight') {
       this.proximoSlide();
     }
   }
@@ -63,7 +67,9 @@ class CarSliders {
   }
 
   private deactivateAllSlides(): void {
-    this.slides.forEach((slide) => slide.classList.remove("active"));
+    this.slides.forEach((slide) => {
+      slide.classList.remove('active');
+    });
   }
 
   private resetCurrentIndex(): void {
@@ -72,7 +78,7 @@ class CarSliders {
 
   private activateSlide(index: number): void {
     this.deactivateAllSlides();
-    this.slides[index].classList.add("active");
+    this.slides[index].classList.add('active');
     this.indexAtual = index;
   }
 
@@ -105,12 +111,7 @@ class CarSliders {
   }
 }
 
-class SliderInitializer {
-  static initialize(): void {
-    document.addEventListener("DOMContentLoaded", () => {
-      new CarSliders();
-    });
-  }
-}
-
-SliderInitializer.initialize();
+// Inicialização
+document.addEventListener('DOMContentLoaded', () => {
+  new CarSliders();
+});
