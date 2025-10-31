@@ -1,0 +1,38 @@
+# Labeler Configuration
+# Auto-adiciona labels baseado nos arquivos modificados
+
+# Dependencies
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: ['package.json', 'package-lock.json']
+
+# Tests
+tests:
+  - changed-files:
+      - any-glob-to-any-file: ['tests/**/*', '**/*.test.ts', '**/*.spec.ts']
+
+# Documentation
+documentation:
+  - changed-files:
+      - any-glob-to-any-file: ['**/*.md', 'docs/**/*']
+
+# CI/CD
+ci:
+  - changed-files:
+      - any-glob-to-any-file: ['.github/**/*']
+
+# Source Code
+source:
+  - changed-files:
+      - any-glob-to-any-file: ['src/**/*']
+
+# Configuration
+config:
+  - changed-files:
+      - any-glob-to-any-file:
+          - '*.config.js'
+          - '*.config.ts'
+          - 'tsconfig.json'
+          - '.prettierrc*'
+          - '.eslintrc*'
+          - '.editorconfig'

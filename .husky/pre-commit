@@ -10,4 +10,8 @@ npx lint-staged
 echo "🔍 Verificando tipos TypeScript..."
 npm run type-check
 
+# Executa testes
+echo "🧪 Executando testes..."
+npm test
+
 echo "✅ Todas as verificações passaram! Commit permitido."

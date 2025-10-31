@@ -1,0 +1,52 @@
+# Dependabot Configuration
+#
+# 🤖 ANALOGIA: Zelador Automático
+# - Verifica atualizações de dependências diariamente
+# - Cria PRs automáticos para atualizações
+# - Mantém o projeto sempre atualizado e seguro
+
+version: 2
+updates:
+  # NPM Dependencies
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+      time: '09:00'
+      timezone: America/Sao_Paulo
+    open-pull-requests-limit: 10
+    assignees:
+      - eryckassis
+    commit-message:
+      prefix: 'chore(deps):'
+      prefix-development: 'chore(deps-dev):'
+    labels:
+      - dependencies
+      - automated
+    # Agrupa atualizações menores
+    groups:
+      development-dependencies:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
+      production-dependencies:
+        dependency-type: production
+        update-types:
+          - minor
+          - patch
+
+  # GitHub Actions
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: '09:00'
+      timezone: America/Sao_Paulo
+    commit-message:
+      prefix: 'ci:'
+    labels:
+      - ci
+      - github-actions
+      - automated
