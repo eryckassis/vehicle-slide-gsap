@@ -1,0 +1,58 @@
+# CodeCov Configuration
+# https://docs.codecov.com/docs/codecov-yaml
+
+# 📊 ANALOGIA: Mapa de Inspeção de Cobertura
+# - Define como a cobertura de testes é calculada
+# - Configura limites de cobertura
+# - Gera relatórios bonitos
+
+codecov:
+  require_ci_to_pass: true
+  notify:
+    wait_for_ci: true
+
+coverage:
+  precision: 2
+  round: down
+  range: '50...100'
+
+  status:
+    project:
+      default:
+        target: 50%
+        threshold: 5%
+        base: auto
+        flags:
+          - unittests
+        if_ci_failed: error
+
+    patch:
+      default:
+        target: 50%
+        threshold: 5%
+
+comment:
+  layout: 'reach,diff,flags,files,footer'
+  behavior: default
+  require_changes: false
+  require_base: false
+  require_head: true
+
+github_checks:
+  annotations: true
+
+ignore:
+  - 'tests/**/*'
+  - '**/*.test.ts'
+  - '**/*.spec.ts'
+  - '**/node_modules/**'
+  - '**/dist/**'
+  - '**/coverage/**'
+  - '**/*.config.js'
+  - '**/*.config.ts'
+
+flags:
+  unittests:
+    paths:
+      - src/
+    carryforward: true
