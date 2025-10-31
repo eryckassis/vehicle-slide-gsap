@@ -14,6 +14,8 @@ jobs:
   validate-pr-title:
     name: 📝 Validate PR Title
     runs-on: ubuntu-latest
+    # Pula validação para PRs do Dependabot
+    if: ${{ github.actor != 'dependabot[bot]' }}
 
     steps:
       - name: 📝 Check PR title follows Conventional Commits
