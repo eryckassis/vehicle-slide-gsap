@@ -25,6 +25,7 @@ export default tseslint.config(
       'eslint.config.js', // Ignora a própria config
       'commitlint.config.js', // Ignora config do commitlint
       'jest.config.js', // Ignora config do jest
+      'vite.config.ts', // Ignora config do vite
     ],
   },
 
